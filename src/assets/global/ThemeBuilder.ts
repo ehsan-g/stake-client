@@ -8,7 +8,7 @@ import { ThemeConfig } from "../../redux/types/types";
 const baseTheme = {
   palette: {
     primary: {
-      main: "#00964b",
+      main: "rgb(112 211 58) ",
       light: "#e6f4ff",
       dark: "#1674f4",
     },
@@ -65,7 +65,8 @@ export const BuildTheme = (config: ThemeConfig) => {
       text: {
         primary:
           customize.activeMode === "dark" ? "#ffff" : "rgba(0, 0, 0, 0.87)",
-        secondary: customize.activeMode === "dark" ? "#cddc39" : "#777e89",
+        secondary:
+          customize.activeMode === "dark" ? "rgb(112 211 58)" : "#777e89",
         custom: "black",
       },
     },

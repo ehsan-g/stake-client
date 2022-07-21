@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { useEffect } from "react";
-import TransactionsTable from "../components/TransactionsTable";
+import Accordions from "../components/Accordions";
 import { useAppDispatch, useAppSelector } from "../redux/app/hooks";
 import { fetchData } from "../redux/features/google/googleSlice";
 
@@ -18,7 +18,7 @@ export default function Main() {
   console.log(data);
   return (
     <Grid container>
-      <TransactionsTable />
+      <Accordions />
     </Grid>
   );
 }
