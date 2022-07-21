@@ -3,11 +3,13 @@ import thunk from "redux-thunk";
 import customizeReducer from "../features/theme/customizerSlice";
 import { ThunkAction, Action } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+import googleSlice from "../features/google/googleSlice";
 
 const preloadedState = {};
 
 const reducer = {
   custumize: customizeReducer,
+  googleQuery: googleSlice,
 };
 
 export const store = configureStore({

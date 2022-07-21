@@ -1,6 +1,8 @@
 {
   "name": "stake-fish",
   "version": "0.1.0",
+  "type": "module",
+  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -16,7 +18,8 @@
     "@types/node": "^17.0.25",
     "@types/react": "^18.0.6",
     "@types/react-dom": "^18.0.2",
-    "axios": "^0.27.2",
+    "install": "^0.13.0",
+    "npm": "^8.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.1",
@@ -26,8 +29,12 @@
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
+    "@google-cloud/bigquery": "^6.0.1",
+    "@googleapis/docs": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -38,8 +45,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "google-auth-library": "^8.1.1",
+    "googleapis": "^105.0.0",
     "jest": "^27.5.1",
     "lodash": "^4.17.21",
+    "nodemon": "^2.0.19",
     "prettier": "^2.6.2",
     "standardx": "3.0.0"
   },
@@ -47,7 +57,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "conc": "concurrently npm:start:* "
   },
   "eslintConfig": {
     "extends": [
