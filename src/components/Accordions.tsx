@@ -83,7 +83,7 @@ export default function Accordions() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography sx={{ color: "text.primary" }}>
-            The number of rows Reference table: {data.length}
+            The number of Reference table rows: {data.length}
           </Typography>
         </AccordionDetails>
       </Accordion>
