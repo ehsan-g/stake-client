@@ -11,7 +11,7 @@ export default function Main() {
 
   useEffect(() => {
     dispatch(fetchData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Grid container justifyContent="center" spacing={2}>
