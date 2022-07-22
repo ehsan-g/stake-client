@@ -39,7 +39,7 @@ export default function Accordions() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
+          <Typography sx={{ color: "text.primary" }}>
             Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
             Aliquam eget maximus est, id dignissim quam.
           </Typography>

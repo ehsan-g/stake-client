@@ -17,11 +17,11 @@ const FullLayout = () => {
   return (
     <MainWrapper>
       <PageWrapper>
-        <Container maxWidth="sm" sx={{ margin: "auto" }}>
+        <Container maxWidth="sm">
           <Box
             sx={{
               minHeight: "calc(100vh - 200px)",
-              paddingTop: "20px",
+              paddingTop: "10px",
               paddingBottom: "30px",
             }}
           >
