@@ -39,7 +39,7 @@ const baseTheme = {
     },
     warning: {
       main: "#fec90f",
-      light: "#fff4e5",
+      light: "#dcb014",
       dark: "#dcb014",
       contrastText: "#ffffff",
     },

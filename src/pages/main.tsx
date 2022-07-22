@@ -16,7 +16,7 @@ export default function Main() {
   return (
     <Grid container justifyContent="center" spacing={2}>
       <Grid item xs={8}>
-        <Alert severity="error">{error}</Alert>
+        {error && <Alert severity="warning">{error}</Alert>}
       </Grid>
       <Grid item xs={12}>
         <Accordions />

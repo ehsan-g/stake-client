@@ -50,10 +50,19 @@ const dataSlice = createSlice({
 
         // Add any fetched data to the array
         state.data = state.data.concat(loadeddata);
+        localStorage.setItem("localTransactions", JSON.stringify(state.data));
       })
       .addCase(fetchData.rejected, (state, action) => {
-        state.status = "failed";
-        state.error = action.error.message;
+        const localTransactions = localStorage.getItem("localTransactions")
+          ? JSON.parse(localStorage.getItem("localTransactions") || "")
+          : null;
+        if (localTransactions) {
+          state.error = "You are loading from Local Storage";
+          state.data = localTransactions;
+        } else {
+          state.status = "failed";
+          state.error = action.error.message;
+        }
       });
   },
 });
